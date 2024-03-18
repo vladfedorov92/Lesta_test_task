@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import FilterBox from "./filterBox";
 import {useAppDispatch} from "../hooks/hooks";
 import {resetFilters} from "../slices/filterSlice";
-import {Vehicle} from "../constants/constants";
-import {addVehicles} from "../slices/vehicleSlice";
+
 
 const Header = () => {
     const [filter, setFilter] = useState(false);
