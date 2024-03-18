@@ -3,7 +3,7 @@ import {useAppDispatch} from "../hooks/hooks";
 import {changeFilterLevels} from "../slices/filterSlice";
 
 
-const Level_27 = () => {
+const Level_16 = () => {
     const dispatch = useAppDispatch();
     let addFilterLevel = (event: any) => {
         event.target.innerText ? event.target.innerText = "" : event.target.innerText = "✔";
@@ -12,6 +12,10 @@ const Level_27 = () => {
 
     return (
         <div className={"filterColumn"}>
+            <div className={"filterBox"}>
+                <div className={"filterOptionBox"} onClick={addFilterLevel} title={"1"}></div>
+                <div className={"filterOption"}>I</div>
+            </div>
             <div className={"filterBox"}>
                 <div className={"filterOptionBox"} onClick={addFilterLevel} title={"2"}></div>
                 <div className={"filterOption"}>II</div>
@@ -32,13 +36,9 @@ const Level_27 = () => {
                 <div className={"filterOptionBox"} onClick={addFilterLevel} title={"6"}></div>
                 <div className={"filterOption"}>VI</div>
             </div>
-            <div className={"filterBox"}>
-                <div className={"filterOptionBox"} onClick={addFilterLevel} title={"7"}></div>
-                <div className={"filterOption"}>VII</div>
-            </div>
         </div>
 
     );
 };
 
-export default Level_27;
+export default Level_16;

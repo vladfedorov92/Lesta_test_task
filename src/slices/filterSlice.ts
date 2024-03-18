@@ -35,8 +35,13 @@ const filterSlice = createSlice({
             else{
                 state.types.push(action.payload);
             }
+        },
+        resetFilters: (state) => {
+            state.levels.splice(0, state.levels.length);
+            state.nations.splice(0, state.nations.length);
+            state.types.splice(0, state.types.length);
         }
     }
 });
-export const {changeFilterLevels, changeFilterTypes, changeFilterNations} = filterSlice.actions;
+export const {changeFilterLevels, changeFilterTypes, changeFilterNations, resetFilters} = filterSlice.actions;
 export default filterSlice.reducer;

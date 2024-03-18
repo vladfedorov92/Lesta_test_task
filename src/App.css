@@ -97,7 +97,7 @@ img {
     display: flex;
     flex-direction: row;
     width: 40vw;
-    height: 20vh;
+    height: 30vh;
     border: 1px solid black;
     justify-content: flex-start;
     align-items: self-start;
@@ -114,6 +114,7 @@ img {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 18%;
+    flex-wrap: wrap;
 }
 
 .filterColumn {
@@ -121,7 +122,7 @@ img {
     padding: 0;
     display: flex;
     flex-direction: column;
-
+    flex-wrap: wrap;
     /*gap: 5%;*/
 }
 
@@ -130,12 +131,13 @@ img {
     flex-direction: row;
     margin: 5% 0;
     gap: 3%;
+    /*flex-wrap: wrap;*/
 }
 
 .filterOption {
     font-size: 12px;
-    width: 20px;
-    height: 20px;
+    width: 2vw;
+    height: 2vh;
     white-space: nowrap;
 }
 
@@ -144,7 +146,7 @@ img {
     width: 20px;
     height: 20px;
     cursor: default;
-}
+    }
 
 .filterFlag {
     width: 35px;
@@ -152,19 +154,20 @@ img {
 
 .filterButtonApply {
     display: flex;
-    position: absolute;
-    top: 43%;
-    left: 54%;
+    position: relative;
+    top: 83%;
+    right: 15%;
 }
 
 .filterButtonReset {
     display: flex;
-    position: absolute;
-    top: 43%;
-    left: 62%;
+    position: relative;
+    top: 83%;
+    right: 15%;
 }
 
 button {
+    white-space: nowrap;
     color: whitesmoke;
     background-color: steelblue;
     padding: 0.25em 1em;

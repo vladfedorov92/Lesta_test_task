@@ -11,6 +11,10 @@ const Level811 = () => {
     return (
         <div className={"filterColumn"}>
             <div className={"filterBox"}>
+                <div className={"filterOptionBox"} onClick={addFilterLevel} title={"7"}></div>
+                <div className={"filterOption"}>VII</div>
+            </div>
+            <div className={"filterBox"}>
                 <div className={"filterOptionBox"} onClick={addFilterLevel} title={"8"}></div>
                 <div className={"filterOption"}>VIII</div>
             </div>

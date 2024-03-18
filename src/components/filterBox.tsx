@@ -1,6 +1,6 @@
 import React from 'react';
-import Level_27 from "./level_2-7";
-import Level811 from "./level_8-11";
+import Level_16 from "./level_1-6";
+import Level811 from "./level_7-11";
 import Nation16 from "./nation_1-6";
 import Nation712 from "./nation_7-12";
 import Nation13 from "./nation_13";
@@ -10,7 +10,7 @@ import {addVehicles, filterVehicles} from "../slices/vehicleSlice";
 import {Vehicle} from "../constants/constants";
 
 
-const FilterBox = () => {
+const FilterBox = (props: { resetFilter: () => void; }) => {
     const dispatch = useAppDispatch();
     const filter = useAppSelector(state => state.filter);
     const storedData = localStorage.getItem('myData');
@@ -24,11 +24,12 @@ const FilterBox = () => {
         }
         if (filter.levels.length || filter.nations.length || filter.types.length) dispatch(filterVehicles(filter));
     };
-    const resetFilter = (e: React.FormEvent) => {
+    const resetFilter = () => {
         if (storedData) {
             const parsedData: Vehicle[] = JSON.parse(storedData);
             dispatch(addVehicles(parsedData));
         }
+        props.resetFilter();
     }
 
     return (
@@ -40,7 +41,7 @@ const FilterBox = () => {
             </div>
             <form onSubmit={submitFilter} onReset={resetFilter}>
                 <div className={"filterContainer"}>
-                    <Level_27/>
+                    <Level_16/>
                     <Level811/>
                     <Nation16/>
                     <Nation712/>
