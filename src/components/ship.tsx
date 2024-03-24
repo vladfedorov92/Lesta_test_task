@@ -15,7 +15,7 @@ const Ship = (props: {
     const [showDescription, setShowDescription] = useState(false);
     const [position, setPosition] = useState({x: 0, y: 0});
 
-    const handleMouseEnter = (e: React.MouseEvent) => {
+    const handleMouseEnter = () => {
         setShowDescription(true);
         };
     const handleMouseLeave = () => {
