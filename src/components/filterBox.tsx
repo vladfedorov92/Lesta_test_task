@@ -17,7 +17,6 @@ const FilterBox = (props: { resetFilter: () => void; }) => {
 
     let submitFilter = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(filter);
         if (storedData) {
             const parsedData: Vehicle[] = JSON.parse(storedData);
             dispatch(addVehicles(parsedData));
@@ -33,7 +32,7 @@ const FilterBox = (props: { resetFilter: () => void; }) => {
     }
 
     return (
-        <div>
+        <div className={"filterTitleContainer"}>
             <div className={"filterTitle"}>
                 <h4>Уровень</h4>
                 <h4>Нация</h4>

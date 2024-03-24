@@ -16,32 +16,33 @@ const Ship = (props: {
     const [position, setPosition] = useState({x: 0, y: 0});
 
     const handleMouseEnter = (e: React.MouseEvent) => {
-        console.log("x= " + e.clientX);
-        console.log("y= " + e.clientY);
         setShowDescription(true);
-        // if (e.clientX > 500) {
-        //     if (e.clientX > 500 && e.clientY > 500) {
-        //         setPosition({x: e.clientX - 500, y: e.clientY - 500});
-        //     } else {
-        //         setPosition({x: e.clientX - 500, y: e.clientY - 200});
-        //     }
-        // } else if (e.clientY > 500) {
-        //     setPosition({x: e.clientX + 100, y: e.clientY - 500});
-        // } else setPosition({x: e.clientX + 100, y: e.clientY + 20});
-    };
+        };
     const handleMouseLeave = () => {
         setShowDescription(false);
     };
     const handleMouseMove = (e: React.MouseEvent) => {
-        if (e.clientX > 500) {
-            if (e.clientX > 500 && e.clientY > 500) {
-                setPosition({x: e.clientX - 500, y: e.clientY - 500});
-            } else {
-                setPosition({x: e.clientX - 500, y: e.clientY - 200});
+        if (e.clientX > 350 && e.clientY < 530) {
+            if (e.clientX > 850 && e.clientX < 1100) {
+                setPosition({x: e.clientX / 2.2, y: e.clientY * 0.5});
             }
-        } else if (e.clientY > 500) {
-            setPosition({x: e.clientX + 100, y: e.clientY - 500});
-        } else setPosition({x: e.clientX + 100, y: e.clientY + 20});
+            else if (e.clientX < 850) {
+                setPosition({x: e.clientX + 20 , y: e.clientY - 250});
+            }
+            else if (e.clientX > 1100){
+                setPosition({x: e.clientX / 1.7, y: e.clientY * 0.5})
+            }
+        } else if (e.clientY > 530) {
+            if (e.clientX > 800) {
+                setPosition({x: e.clientX / 2.2, y: e.clientY / 3});
+            }
+            else {
+                setPosition({x: e.clientX + 20, y: e.clientY / 3});
+            }
+
+        } else {
+            setPosition({x: e.clientX * 1.1, y: e.clientY * 0.5});
+        }
     }
 
     return (

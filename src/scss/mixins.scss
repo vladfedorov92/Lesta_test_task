@@ -28,18 +28,34 @@
 
 @mixin grid($cols, $margin) {
   float: left;
-  background: $bgColor;
   margin-bottom: $margin;
   max-height: 40vh;
-  @if($cols >= 5) {
-    width: 100%;
-    margin-right: 0;
-  }
-  @else {
-    width: ((100%-(($cols - 1) * $margin)) / $cols);
-    margin-right: $margin;
-  }
+  width: ((100%-(($cols - 1) * $margin)) / $cols);
+  margin-right: $margin;
+  @content;
   &:nth-child(#{$cols}n){
     margin-right: 0;
   }
 }
+@mixin loader() {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 47%;
+  &:before, &:after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px 2px $bgColor inset;
+  }
+  &:after {
+    box-shadow: 0 2px 0 $fontColor inset;
+    animation: rotate 2s linear infinite;
+  }
+}
+@keyframes rotate {
+   0% {  transform: rotate(0)}
+   100% { transform: rotate(360deg)}
+ }

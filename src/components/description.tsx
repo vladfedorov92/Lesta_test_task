@@ -19,7 +19,6 @@ const Description: React.FC<DescriptionProps> = props => {
         >
 
             <div className={"shipDescriptionProps"}><img src={props.vehicleImage} alt="vehicle" className={"vehicleImageInDescription"}/></div>
-            <br/>
 
             <div className={"shipDescriptionPropsTitle"}>{props.title}</div>
 

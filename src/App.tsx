@@ -1,17 +1,19 @@
 import './App.css';
 import ShipList from "./components/shipList";
 import Header from "./components/header";
+import {useAppSelector} from "./hooks/hooks";
+
 
 function App() {
-     return (
-    <div className="App" >
-        {/*<div className={"backgroundImage"}>*/}
-        {/*    <img src={"https://mk-static-production.lesta.ru/metashop/bd91dbc0/assets/images/main_bg.jpg"} alt="backgroundImage"/>*/}
-        {/*</div>*/}
-        <Header/>
-        <ShipList/>
-    </div>
-  );
+    const load = useAppSelector(state => state.vehicle.length);
+    const loading = localStorage.getItem('myData')?.length;
+        return (
+        <div className="App">
+            <Header/>
+            {(!loading && ! load && <span className="loader"></span>)}
+            <ShipList/>
+        </div>
+    );
 }
 
 export default App;
