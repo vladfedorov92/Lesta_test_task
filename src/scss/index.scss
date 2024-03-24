@@ -90,16 +90,16 @@ img {
 
 
 ::-webkit-scrollbar {
-  width: 0px; /* Ширина полосы прокрутки */
+  width: 0;
 }
 
-/* Для кастомизации ползунка */
+
 ::-webkit-scrollbar-thumb {
-  background-color: $bgColor; /* Цвет ползунка */
-  border-radius: 2px; /* Радиус закругления углов ползунка */
+  background-color: $bgColor;
+  border-radius: 2px;
 }
 
-/* Опционально: Если вы хотите изменить цвет при наведении на ползунок */
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: lighten($bgColor, 30);
 }
