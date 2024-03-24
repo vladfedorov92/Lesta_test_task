@@ -8,14 +8,14 @@ interface DescriptionProps {
     typeName: string;
     level: number;
     vehicleImage: string;
-    // position: { x: number, y: number };
+    position: { x: number, y: number };
     }
 
 const Description: React.FC<DescriptionProps> = props => {
 
     return (
         <div className={"shipDescription"}
-             // style={{position:"absolute", top: props.position.y, left: props.position.x}}
+             style={{top: props.position.y, left: props.position.x}}
         >
 
             <div className={"shipDescriptionProps"}><img src={props.vehicleImage} alt="vehicle" className={"vehicleImageInDescription"}/></div>

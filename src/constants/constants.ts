@@ -68,6 +68,7 @@ export interface FilterPayload {
     nations: string[];
     types: string[];
 }
+export const  backgroundImage = "../images/wp5695714.jpg"
 export const japan = "//glossary.korabli.su/icons/nation_flags/large/flag_Japan_dc7a62826070d782f60b959d0b00fa9548d97a3893f08824d2e2dece8df3ce78.png";
 export const usa = "//glossary.korabli.su/icons/nation_flags/large/flag_USA_bfe874dbd91cdd9e7b77e378d7efeb221931b9b25d24e79a138fe4801050966c.png";
 export const ussr = "//glossary.korabli.su/icons/nation_flags/large/flag_Russia_a23dac134108e86530943971aed79d13fb6eab45748b539826c3538662bfe5d1.png";

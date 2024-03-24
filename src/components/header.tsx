@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import FilterBox from "./filterBox";
-import {useAppDispatch} from "../hooks/hooks";
+import {useAppDispatch, useAppSelector} from "../hooks/hooks";
 import {resetFilters} from "../slices/filterSlice";
 
 
 const Header = () => {
     const [filter, setFilter] = useState(false);
     const dispatch = useAppDispatch();
+    const shipsAmount = useAppSelector(state => state.vehicle.length.toString());
 
     const handleClick = () => {
         filter ? setFilter(false) : setFilter(true);
@@ -15,10 +16,12 @@ const Header = () => {
 
     return (
         <header>
-            <h1>Мир Кораблей</h1>
-            <h2>Все корабли игры за все время существования</h2>
-            {!filter && <button onClick={handleClick}>Фильтр</button>}
+            <h1 className={"mainTitle"}>Мир Кораблей</h1>
+            <h2 className={"second Title"}>для преданных поклонников игры</h2>
+            {!filter && <button onClick={handleClick}>Фильтры отображения кораблей</button>}
             {filter &&  (<FilterBox resetFilter={handleClick}/>)}
+            <h3>Всего кораблей: {shipsAmount}</h3>
+
         </header>
     );
 };

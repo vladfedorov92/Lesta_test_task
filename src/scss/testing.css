@@ -1,0 +1,311 @@
+.App {
+  margin: 0;
+  padding: 0;
+  background: url("https://mk-static-production.lesta.ru/metashop/bd91dbc0/assets/images/main_bg.jpg"); }
+
+.shipImages {
+  display: flex;
+  height: 15vh;
+  justify-content: center; }
+
+.box {
+  width: 23vw;
+  height: 15vh;
+  display: flex;
+  margin: auto 2vh;
+  /*align-items: center;*/
+  /*justify-content: center;*/ }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 82.5vh; }
+
+img {
+  width: 50%; }
+
+.imageFlag {
+  width: 100%; }
+
+.shipDescription {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  position: absolute;
+  /*left: 5%;*/
+  display: flex;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
+  width: 30vw;
+  height: 50vh;
+  font-size: small;
+  align-items: center;
+  word-wrap: break-word;
+  backdrop-filter: blur(24px);
+  overflow: hidden; }
+
+.shipDescriptionProps {
+  padding: 2%; }
+
+.shipDescriptionPropsDescription {
+  padding: 2%;
+  overflow: auto; }
+
+.shipDescriptionPropsTitle {
+  padding: 2%;
+  font-weight: bold;
+  font-size: large; }
+
+.flagImages {
+  width: 200px; }
+
+.vehicleTitle {
+  font-weight: bold;
+  font-size: large;
+  z-index: -1; }
+
+.vehicleImageInDescription {
+  width: 10vw; }
+
+.filterContainer {
+  margin: 0 30%;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  height: 30vh;
+  border: 1px solid black;
+  justify-content: flex-start;
+  align-items: self-start;
+  gap: 2%; }
+
+.filterTitle {
+  margin: 0 30%;
+  padding: 10px 0 10px 30px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18%;
+  flex-wrap: wrap; }
+
+.filterColumn {
+  margin: 1% 1%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*gap: 5%;*/ }
+
+.filterBox {
+  display: flex;
+  flex-direction: row;
+  margin: 5% 0;
+  gap: 3%;
+  /*flex-wrap: wrap;*/ }
+
+.filterOption {
+  font-size: 12px;
+  width: 2vw;
+  height: 2vh;
+  white-space: nowrap; }
+
+.filterOptionBox {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  cursor: default; }
+
+.filterFlag {
+  width: 35px; }
+
+.filterButtonApply {
+  display: flex;
+  position: relative;
+  top: 83%;
+  right: 15%; }
+
+.filterButtonReset {
+  display: flex;
+  position: relative;
+  top: 83%;
+  right: 15%; }
+
+button {
+  white-space: nowrap;
+  color: whitesmoke;
+  background-color: steelblue;
+  padding: 0.25em 1em;
+  border: 2px solid steelblue;
+  /*border-radius: 3px;*/ }
+
+.filterButtonApply:hover {
+  background-color: limegreen;
+  border-color: limegreen;
+  color: black; }
+
+.filterButtonReset:hover {
+  background-color: orangered;
+  border-color: orangered;
+  color: black; }
+
+.App {
+  margin: 0;
+  padding: 0;
+  background: url("https://mk-static-production.lesta.ru/metashop/bd91dbc0/assets/images/main_bg.jpg"); }
+
+.shipImages {
+  display: flex;
+  height: 15vh;
+  justify-content: center; }
+
+.box {
+  width: 23vw;
+  height: 15vh;
+  display: flex;
+  margin: auto 2vh;
+  /*align-items: center;*/
+  /*justify-content: center;*/ }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 82.5vh; }
+
+img {
+  width: 50%; }
+
+.imageFlag {
+  width: 100%; }
+
+.shipDescription {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  position: absolute;
+  /*left: 5%;*/
+  display: flex;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
+  width: 30vw;
+  height: 50vh;
+  font-size: small;
+  align-items: center;
+  word-wrap: break-word;
+  backdrop-filter: blur(24px);
+  overflow: hidden; }
+
+.shipDescriptionProps {
+  padding: 2%; }
+
+.shipDescriptionPropsDescription {
+  padding: 2%;
+  overflow: auto; }
+
+.shipDescriptionPropsTitle {
+  padding: 2%;
+  font-weight: bold;
+  font-size: large; }
+
+.flagImages {
+  width: 200px; }
+
+.vehicleTitle {
+  font-weight: bold;
+  font-size: large;
+  z-index: -1; }
+
+.vehicleImageInDescription {
+  width: 10vw; }
+
+.filterContainer {
+  margin: 0 30%;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  height: 30vh;
+  border: 1px solid black;
+  justify-content: flex-start;
+  align-items: self-start;
+  gap: 2%; }
+
+.filterTitle {
+  margin: 0 30%;
+  padding: 10px 0 10px 30px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18%;
+  flex-wrap: wrap; }
+
+.filterColumn {
+  margin: 1% 1%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*gap: 5%;*/ }
+
+.filterBox {
+  display: flex;
+  flex-direction: row;
+  margin: 5% 0;
+  gap: 3%;
+  /*flex-wrap: wrap;*/ }
+
+.filterOption {
+  font-size: 12px;
+  width: 2vw;
+  height: 2vh;
+  white-space: nowrap; }
+
+.filterOptionBox {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  cursor: default; }
+
+.filterFlag {
+  width: 35px; }
+
+.filterButtonApply {
+  display: flex;
+  position: relative;
+  top: 83%;
+  right: 15%; }
+
+.filterButtonReset {
+  display: flex;
+  position: relative;
+  top: 83%;
+  right: 15%; }
+
+button {
+  white-space: nowrap;
+  color: whitesmoke;
+  background-color: steelblue;
+  padding: 0.25em 1em;
+  border: 2px solid steelblue;
+  /*border-radius: 3px;*/ }
+
+.filterButtonApply:hover {
+  background-color: limegreen;
+  border-color: limegreen;
+  color: black; }
+
+.filterButtonReset:hover {
+  background-color: orangered;
+  border-color: orangered;
+  color: black; }
+
+/*# sourceMappingURL=testing.css.map */

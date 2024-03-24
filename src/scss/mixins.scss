@@ -1,0 +1,45 @@
+@import "variables";
+
+@mixin font($fontWeight, $count, $color: aliceBlue) {
+  font-size: $mainFontSize*$count;
+  font-weight: $fontWeight;
+  @content;
+  color: $color;
+}
+
+@mixin button($color) {
+  padding: 0.5%;
+  border: $border;
+  background: $bgColor;
+  &:hover {
+    background-color: $color;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@mixin flex($direction, $wrap, $justify-content, $align-items){
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid($cols, $margin) {
+  float: left;
+  background: $bgColor;
+  margin-bottom: $margin;
+  max-height: 40vh;
+  @if($cols >= 5) {
+    width: 100%;
+    margin-right: 0;
+  }
+  @else {
+    width: ((100%-(($cols - 1) * $margin)) / $cols);
+    margin-right: $margin;
+  }
+  &:nth-child(#{$cols}n){
+    margin-right: 0;
+  }
+}
