@@ -8,7 +8,7 @@ import {FilterPayload, GET_VEHICLES, Vehicle} from "../constants/constants";
 const initialState: Vehicle[] = [];
 export const fetchVehicles = createAsyncThunk<Vehicle[], void, { state: RootState }>(
     'vehicle/fetchVehicles',
-    async (_, {getState}) => {
+    async () => {
         try {
             const data = await executeGraphqlQuery<{ vehicles: Vehicle[] }>(GET_VEHICLES);
             localStorage.setItem('myData', JSON.stringify(data.vehicles));

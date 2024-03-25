@@ -6,9 +6,10 @@ import {changeFilterNations} from "../slices/filterSlice";
 const Nation16 = () => {
     const dispatch = useAppDispatch();
 
-    let filterVehicleByNation = (event: any) => {
-        event.target.innerText ? event.target.innerText="" : event.target.innerText="✔";
-        dispatch(changeFilterNations(event.target.title));
+    const filterVehicleByNation = (event: React.MouseEvent<HTMLDivElement>) => {
+        const target = event.target as HTMLElement;
+        target.innerText ? target.innerText="" : target.innerText="✔";
+        dispatch(changeFilterNations(target.title));
         }
 
     return (

@@ -15,7 +15,7 @@ const FilterBox = (props: { resetFilter: () => void; }) => {
     const filter = useAppSelector(state => state.filter);
     const storedData = localStorage.getItem('myData');
 
-    let submitFilter = (e: React.FormEvent) => {
+    const submitFilter = (e: React.FormEvent) => {
         e.preventDefault();
         if (storedData) {
             const parsedData: Vehicle[] = JSON.parse(storedData);

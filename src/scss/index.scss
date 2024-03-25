@@ -7,8 +7,6 @@
   background: url("https://mk-static-production.lesta.ru/metashop/bd91dbc0/assets/images/main_bg.jpg");
   background-size: 100% 100%;
   min-height: 100vh;
-  //max-height: 100vh;
-
 
   .loader {
     text-align: center;
@@ -28,18 +26,27 @@ header {
     padding: 0;
     @include font(bold, 3);
     font-family: Impact, fantasy;
+    @media screen and (max-width: 719px) {
+      @include font(bold, 1.5);
+    }
   }
 
   h3 {
     @include font(normal, 1.5);
     font-family: Impact, fantasy;
     margin-bottom: 0;
+    @media screen and (max-width: 719px) {
+      @include font(normal, 0.75);
+    }
   }
 
   button {
     @include font(light, 0.7);
     font-family: Andale Mono, monospace;
     @include button(cadetblue);
+    @media screen and (max-width: 719px) {
+      @include font(light, 0.35);
+    }
   }
 }
 
@@ -54,7 +61,6 @@ header {
     background: $bgColor;
     border: $border;
 
-
     div {
       padding-bottom: 1vh;
       @include flex(column, wrap, center, center);
@@ -66,11 +72,13 @@ header {
         .vehicleTitle {
           @include font(normal, 1.5);
           font-family: Impact, fantasy;
+          @media screen and (max-width: 719px) {
+            @include font(normal, 0.75);
+          }
         }
       }
 
       .imageFlag {
-
         width: 20%;
       }
     }
@@ -83,15 +91,20 @@ header {
       max-height: 60vh;
       @include font(lighter, 0.8);
       font-family: Andale Mono, monospace;
-      //word-wrap: break-word;
       backdrop-filter: blur(24px);
       overflow: hidden;
+      @media screen and (max-width: 719px) {
+        @include font(lighter, 0.4);
+      }
 
       .shipDescriptionProps {
         @include flex(column, wrap, center, center);
         width: 90%;
         height: 90%;
         text-decoration: underline;
+        @media screen and (max-width: 1100px) {
+          font-size: $mainFontSize / 2;
+        }
 
         .vehicleImageInDescription {
           width: 40%;
@@ -102,12 +115,21 @@ header {
         @include font(normal, 1.5);
         font-family: Impact, fantasy;
         text-decoration: underline;
+        @media screen and (max-width: 1100px) {
+          @include font(normal, 0.7);
+        }
+        @media screen and (max-width: 719px) {
+          @include font(normal, 0.5);
+        }
       }
 
       .shipDescriptionPropsDescription {
         padding-right: 1vh;
         padding-left: 1vh;
         text-align: center;
+        @media screen and (max-width: 1100px) {
+          font-size: $mainFontSize / 2;
+        }
       }
     }
   }
@@ -117,20 +139,28 @@ img {
   width: 70%;
 }
 
-
 .filterTitleContainer {
   border: $border;
   background: $bgColor;
+  padding: 1vh 1vw;
   @include font(light, 1);
   font-family: Andale Mono, monospace;
+  max-width: 45vw;
+  @media screen and (max-width: 950px) {
+    @include font(light, 0.5);
+  }
+  @media screen and (max-width: 600px) {
+    @include font(light, 0.1);
+  }
 
   .filterTitle {
     @include flex(row, wrap, space-between, center);
     padding-left: 10%;
-    padding-right: 15%;
+    padding-right: 5%;
   }
 
   .filterContainer {
+    max-width: 65vw;
     .filterButtonApply {
       @include button(green);
     }
@@ -140,7 +170,10 @@ img {
     }
 
     .filterColumn {
+      padding: 0;
       @include grid(7, 1%);
+      margin-left: 0;
+
 
       .filterBox {
         @include flex(row, wrap, center, center);
@@ -149,18 +182,21 @@ img {
         margin-bottom: 5%;
 
         .filterOption {
-          font-size: 12px;
+          font-size: $mainFontSize / 1.5;
           width: 2vw;
           height: 2vh;
           white-space: nowrap;
+          @media screen and (max-width: 950px) {
+            font-size: $mainFontSize / 2;
+          }
         }
 
         .filterOptionBox {
           @include flex(column, wrap, center, center);
           margin: 0;
           border: 1px solid darken(whitesmoke, 40);
-          width: 20px;
-          height: 20px;
+          width: 1vw;
+          height: 2vh;
           cursor: default;
         }
       }

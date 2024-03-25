@@ -29,7 +29,6 @@
 @mixin grid($cols, $margin) {
   float: left;
   margin-bottom: $margin;
-  max-height: 40vh;
   width: ((100%-(($cols - 1) * $margin)) / $cols);
   margin-right: $margin;
   @content;

@@ -4,9 +4,10 @@ import {changeFilterTypes} from "../slices/filterSlice";
 
 const ClassType = () => {
     const dispatch = useAppDispatch();
-    let addFilterType = (event: any) => {
-        event.target.innerText ? event.target.innerText = "" : event.target.innerText = "✔";
-        dispatch(changeFilterTypes(event.target.title));
+    const addFilterType = (event: React.MouseEvent<HTMLDivElement>) => {
+        const target = event.target as HTMLElement;
+        target.innerText ? target.innerText = "" : target.innerText = "✔";
+        dispatch(changeFilterTypes(target.title));
     }
     return (
         <div className={"filterColumn"}>

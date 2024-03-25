@@ -23,7 +23,7 @@ const ShipList: React.FC = () => {
         };
 
         if(storedData){
-            const parsedData: any = JSON.parse(storedData);
+            const parsedData = JSON.parse(storedData);
             dispatch(addVehicles(parsedData));
             }
         else{

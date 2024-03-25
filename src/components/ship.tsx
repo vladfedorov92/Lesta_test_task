@@ -5,11 +5,11 @@ import Description from "./description";
 const Ship = (props: {
     ship: {
         icons: { medium: string };
-        nation: { icons: { large: string }; title: any; };
-        title: any;
-        description: any;
+        nation: { icons: { large: string }; title: string; };
+        title: string;
+        description: string;
         level: number;
-        type: { title: any; };
+        type: { title: string; };
     };
 }) => {
     const [showDescription, setShowDescription] = useState(false);
