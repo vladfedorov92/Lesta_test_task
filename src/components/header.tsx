@@ -17,7 +17,6 @@ const Header = () => {
     return (
         <header>
             <h1 className={"mainTitle"}>Мир Кораблей</h1>
-            <h2 className={"second Title"}>для преданных поклонников игры</h2>
             {!filter && <button onClick={handleClick}>Фильтры отображения кораблей</button>}
             {filter &&  (<FilterBox resetFilter={handleClick}/>)}
             <h3>Всего кораблей: {shipsAmount}</h3>
