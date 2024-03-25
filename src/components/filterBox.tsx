@@ -50,7 +50,6 @@ const FilterBox = (props: { resetFilter: () => void; }) => {
                     <button className={"filterButtonReset"} type={"reset"}>Сбросить все</button>
                 </div>
             </form>
-
         </div>
     );
 };

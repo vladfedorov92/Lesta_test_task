@@ -10,7 +10,6 @@ const Level_16 = () => {
         target.innerText ? target.innerText = "" : target.innerText = "✔";
         dispatch(changeFilterLevels(target.title));
         }
-
     return (
         <div className={"filterColumn"}>
             <div className={"filterBox"}>
@@ -38,7 +37,6 @@ const Level_16 = () => {
                 <div className={"filterOption"}>VI</div>
             </div>
         </div>
-
     );
 };
 

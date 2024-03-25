@@ -2,7 +2,6 @@ import {configureStore} from '@reduxjs/toolkit'
 import vehicleSlice from "../slices/vehicleSlice";
 import filterSlice from "../slices/filterSlice";
 
-
 export const store = configureStore({
     middleware: getDefaultMiddleware => getDefaultMiddleware(),
     reducer: {

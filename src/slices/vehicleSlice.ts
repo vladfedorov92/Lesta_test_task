@@ -3,8 +3,6 @@ import {RootState} from "../store/store";
 import executeGraphqlQuery from "../schema/requests";
 import {FilterPayload, GET_VEHICLES, Vehicle} from "../constants/constants";
 
-
-
 const initialState: Vehicle[] = [];
 export const fetchVehicles = createAsyncThunk<Vehicle[], void, { state: RootState }>(
     'vehicle/fetchVehicles',

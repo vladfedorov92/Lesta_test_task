@@ -20,7 +20,6 @@ const Header = () => {
             {!filter && <button onClick={handleClick}>Фильтры отображения кораблей</button>}
             {filter &&  (<FilterBox resetFilter={handleClick}/>)}
             <h3>Всего кораблей: {shipsAmount}</h3>
-
         </header>
     );
 };

@@ -8,9 +8,7 @@ import {Vehicle} from "../constants/constants";
 
 
 const ShipList: React.FC = () => {
-
     const storedData = localStorage.getItem('myData');
-
     const vehicles = useAppSelector((state: RootState) => state.vehicle);
     const dispatch = useAppDispatch();
     useEffect(() => {
@@ -21,7 +19,6 @@ const ShipList: React.FC = () => {
                 console.error('Failed to fetch data:', error);
             }
         };
-
         if(storedData){
             const parsedData = JSON.parse(storedData);
             dispatch(addVehicles(parsedData));
@@ -29,16 +26,12 @@ const ShipList: React.FC = () => {
         else{
             fetchData()
                 .then( () =>{
-                    console.log(vehicles)
-                })
+                    })
                 .catch(error => {
                     console.log(error.message)
                 });
         }
-
     }, []);
-
-
     return (
         <div className={"container"}>
             {vehicles.map((item: Vehicle, index: number) => <Ship key={index} index={index} ship={item} />)}

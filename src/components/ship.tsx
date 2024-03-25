@@ -14,13 +14,12 @@ const Ship = (props: {
 }) => {
     const [showDescription, setShowDescription] = useState(false);
     const [position, setPosition] = useState({x: 0, y: 0});
-
     const handleMouseEnter = () => {
         setShowDescription(true);
-        };
+        }
     const handleMouseLeave = () => {
         setShowDescription(false);
-    };
+    }
     const handleMouseMove = (e: React.MouseEvent) => {
         if (e.clientX > 350 && e.clientY < 530) {
             if (e.clientX > 850 && e.clientX < 1100) {
