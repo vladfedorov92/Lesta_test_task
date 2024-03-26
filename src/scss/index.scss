@@ -42,7 +42,9 @@ header {
 
   button {
     @include font(light, 0.7);
-    font-family: Andale Mono, monospace;
+    font-family:
+      Andale Mono,
+      monospace;
     @include button(cadetblue);
     @media screen and (max-width: 719px) {
       @include font(light, 0.35);
@@ -90,7 +92,9 @@ header {
       max-width: 25vw;
       max-height: 60vh;
       @include font(lighter, 0.8);
-      font-family: Andale Mono, monospace;
+      font-family:
+        Andale Mono,
+        monospace;
       backdrop-filter: blur(24px);
       overflow: hidden;
       @media screen and (max-width: 719px) {
@@ -144,7 +148,9 @@ img {
   background: $bgColor;
   padding: 1vh 1vw;
   @include font(light, 1);
-  font-family: Andale Mono, monospace;
+  font-family:
+    Andale Mono,
+    monospace;
   max-width: 45vw;
   @media screen and (max-width: 950px) {
     @include font(light, 0.5);
@@ -173,7 +179,6 @@ img {
       padding: 0;
       @include grid(7, 1%);
       margin-left: 0;
-
 
       .filterBox {
         @include flex(row, wrap, center, center);

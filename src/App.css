@@ -1,6 +1,5 @@
 @import "./scss/index.css";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-

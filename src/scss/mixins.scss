@@ -1,7 +1,7 @@
 @import "variables";
 
 @mixin font($fontWeight, $count, $color: aliceBlue) {
-  font-size: $mainFontSize*$count;
+  font-size: $mainFontSize * $count;
   font-weight: $fontWeight;
   @content;
   color: $color;
@@ -15,10 +15,10 @@
     background-color: $color;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+  }
 }
 
-@mixin flex($direction, $wrap, $justify-content, $align-items){
+@mixin flex($direction, $wrap, $justify-content, $align-items) {
   display: flex;
   flex-direction: $direction;
   flex-wrap: $wrap;
@@ -32,7 +32,7 @@
   width: ((100%-(($cols - 1) * $margin)) / $cols);
   margin-right: $margin;
   @content;
-  &:nth-child(#{$cols}n){
+  &:nth-child(#{$cols}n) {
     margin-right: 0;
   }
 }
@@ -42,8 +42,9 @@
   height: 100px;
   top: 50%;
   left: 47%;
-  &:before, &:after {
-    content: '';
+  &:before,
+  &:after {
+    content: "";
     border-radius: 50%;
     position: absolute;
     inset: 0;
@@ -55,6 +56,10 @@
   }
 }
 @keyframes rotate {
-   0% {  transform: rotate(0)}
-   100% { transform: rotate(360deg)}
- }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

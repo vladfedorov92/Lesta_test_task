@@ -8,32 +8,32 @@
 Необходимые данные можно получить выполнив GraphQL запрос к API. Запросы должны выполняться с localhost в качестве origin, ввиду ограничений CORS.
 
 {
-  vehicles {
-    title
-    description
-    icons {
-      large
-      medium
-    }
-    level
-    type {
-      name
-    	title
-      icons {
-        default
-      }
-    }
-    nation {
-      name
-      title
-      color
-      icons {
-        smal
-        medium
-        large
-      }
-    }
-  }
+vehicles {
+title
+description
+icons {
+large
+medium
+}
+level
+type {
+name
+title
+icons {
+default
+}
+}
+nation {
+name
+title
+color
+icons {
+smal
+medium
+large
+}
+}
+}
 }
 Требования к технической реализации:
 

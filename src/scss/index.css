@@ -17,7 +17,7 @@
     top: 50%;
     left: 47%; }
     .App .loader:before, .App .loader:after {
-      content: '';
+      content: "";
       border-radius: 50%;
       position: absolute;
       inset: 0;
