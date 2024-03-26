@@ -1,13 +1,14 @@
 import React from "react";
-import { useAppDispatch } from "../hooks/hooks";
 import { changeFilterTypes } from "../slices/filterSlice";
 
-const ClassType = () => {
-  const dispatch = useAppDispatch();
+const ClassType = (props: {
+  changeFilter: (
+    arg1: React.MouseEvent<HTMLDivElement>,
+    arg2: Function,
+  ) => void;
+}) => {
   const addFilterType = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLElement;
-    target.innerText ? (target.innerText = "") : (target.innerText = "✔");
-    dispatch(changeFilterTypes(target.title));
+    props.changeFilter(event, changeFilterTypes);
   };
   return (
     <div className={"filterColumn"}>

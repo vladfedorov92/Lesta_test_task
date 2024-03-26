@@ -29,6 +29,14 @@ const FilterBox = (props: { resetFilter: () => void }) => {
     }
     props.resetFilter();
   };
+  const changeFilter = (
+    event: React.MouseEvent<HTMLDivElement>,
+    action: Function,
+  ) => {
+    const target = event.target as HTMLElement;
+    target.innerText ? (target.innerText = "") : (target.innerText = "✔");
+    dispatch(action(target.title));
+  };
   return (
     <div className={"filterTitleContainer"}>
       <div className={"filterTitle"}>
@@ -38,12 +46,12 @@ const FilterBox = (props: { resetFilter: () => void }) => {
       </div>
       <form onSubmit={submitFilter} onReset={resetFilter}>
         <div className={"filterContainer"}>
-          <Level_16 />
-          <Level811 />
-          <Nation16 />
-          <Nation712 />
-          <Nation13 />
-          <ClassType />
+          <Level_16 changeFilter={changeFilter} />
+          <Level811 changeFilter={changeFilter} />
+          <Nation16 changeFilter={changeFilter} />
+          <Nation712 changeFilter={changeFilter} />
+          <Nation13 changeFilter={changeFilter} />
+          <ClassType changeFilter={changeFilter} />
           <button className={"filterButtonApply"} type={"submit"}>
             Применить
           </button>

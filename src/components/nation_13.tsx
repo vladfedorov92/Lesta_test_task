@@ -1,14 +1,15 @@
 import React from "react";
-import { useAppDispatch } from "../hooks/hooks";
 import { spain } from "../constants/constants";
 import { changeFilterNations } from "../slices/filterSlice";
 
-const Nation13 = () => {
-  const dispatch = useAppDispatch();
+const Nation13 = (props: {
+  changeFilter: (
+    arg1: React.MouseEvent<HTMLDivElement>,
+    arg2: Function,
+  ) => void;
+}) => {
   const filterVehicleByNation = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLElement;
-    target.innerText ? (target.innerText = "") : (target.innerText = "✔");
-    dispatch(changeFilterNations(target.title));
+    props.changeFilter(event, changeFilterNations);
   };
   return (
     <div className={"filterColumn"}>

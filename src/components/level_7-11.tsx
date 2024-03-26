@@ -1,13 +1,14 @@
 import React from "react";
-import { useAppDispatch } from "../hooks/hooks";
 import { changeFilterLevels } from "../slices/filterSlice";
 
-const Level811 = () => {
-  const dispatch = useAppDispatch();
+const Level811 = (props: {
+  changeFilter: (
+    arg1: React.MouseEvent<HTMLDivElement>,
+    arg2: Function,
+  ) => void;
+}) => {
   const addFilterLevel = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLElement;
-    target.innerText ? (target.innerText = "") : (target.innerText = "✔");
-    dispatch(changeFilterLevels(target.title));
+    props.changeFilter(event, changeFilterLevels);
   };
   return (
     <div className={"filterColumn"}>
