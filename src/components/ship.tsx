@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Description from "./description";
+import ShipTooltip from "./shipTooltip";
+import { createPortal } from "react-dom";
 
 const Ship = (props: {
   ship: {
@@ -13,7 +14,10 @@ const Ship = (props: {
   };
 }) => {
   const [showDescription, setShowDescription] = useState(false);
+  // const [position, setPosition] = useState({x: "0", y: "0"});
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const tooltipWrapper = document.querySelector(".tooltip-wrapper");
+
   const handleMouseEnter = () => {
     setShowDescription(true);
   };
@@ -21,22 +25,20 @@ const Ship = (props: {
     setShowDescription(false);
   };
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (e.clientX > 350 && e.clientY < 530) {
-      if (e.clientX > 850 && e.clientX < 1100) {
-        setPosition({ x: e.clientX / 2.2, y: e.clientY * 0.5 });
-      } else if (e.clientX < 850) {
-        setPosition({ x: e.clientX + 20, y: e.clientY - 250 });
-      } else if (e.clientX > 1100) {
-        setPosition({ x: e.clientX / 1.7, y: e.clientY * 0.5 });
-      }
-    } else if (e.clientY > 530) {
-      if (e.clientX > 800) {
-        setPosition({ x: e.clientX / 2.2, y: e.clientY / 3 });
-      } else {
-        setPosition({ x: e.clientX + 20, y: e.clientY / 3 });
-      }
+    const x = e.clientX;
+    const y = e.clientY;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const changePositionX = screenWidth * 0.31;
+
+    if (x < screenWidth / 2 && y < screenHeight / 2) {
+      setPosition({ x: e.clientX + 10, y: e.clientY + 10 });
+    } else if (x < screenWidth / 2 && y > screenHeight / 2) {
+      setPosition({ x: e.clientX + 10, y: e.clientY - 180 });
+    } else if (x > screenWidth / 2 && y < screenHeight / 2) {
+      setPosition({ x: e.clientX - changePositionX, y: e.clientY + 10 });
     } else {
-      setPosition({ x: e.clientX * 1.1, y: e.clientY * 0.5 });
+      setPosition({ x: e.clientX - changePositionX, y: e.clientY - 180 });
     }
   };
   return (
@@ -46,6 +48,7 @@ const Ship = (props: {
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
     >
+      <div className={"tooltip-wrapper"}></div>
       <div className={"shipImages"}>
         <div className={"vehicleBox"}>
           <div className={"vehicleTitle"}>{props.ship.title}</div>
@@ -59,17 +62,32 @@ const Ship = (props: {
           <img src={props.ship.icons.medium} alt="" />
         </div>
       </div>
-      {showDescription && (
-        <Description
-          title={props.ship.title}
-          description={props.ship.description}
-          nationName={props.ship.nation.title}
-          typeName={props.ship.type.title}
-          level={props.ship.level}
-          vehicleImage={props.ship.icons.medium}
-          position={position}
-        />
-      )}
+      {/*{showDescription && (*/}
+      {/*  <ShipTooltip*/}
+      {/*    title={props.ship.title}*/}
+      {/*    description={props.ship.description}*/}
+      {/*    nationName={props.ship.nation.title}*/}
+      {/*    typeName={props.ship.type.title}*/}
+      {/*    level={props.ship.level}*/}
+      {/*    vehicleImage={props.ship.icons.medium}*/}
+      {/*    position={position}*/}
+      {/*  />*/}
+      {/*)}*/}
+
+      {tooltipWrapper &&
+        showDescription &&
+        createPortal(
+          <ShipTooltip
+            title={props.ship.title}
+            description={props.ship.description}
+            nationName={props.ship.nation.title}
+            typeName={props.ship.type.title}
+            level={props.ship.level}
+            vehicleImage={props.ship.icons.medium}
+            position={position}
+          />,
+          tooltipWrapper,
+        )}
     </div>
   );
 };

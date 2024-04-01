@@ -2,6 +2,7 @@ import "./App.css";
 import ShipList from "./components/shipList";
 import Header from "./components/header";
 import { useAppSelector } from "./hooks/hooks";
+import React from "react";
 
 function App() {
   const load = useAppSelector((state) => state.vehicle.length);

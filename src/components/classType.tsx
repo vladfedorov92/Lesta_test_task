@@ -1,10 +1,11 @@
 import React from "react";
 import { changeFilterTypes } from "../slices/filterSlice";
+import { ActionCreatorWithPayload } from "@reduxjs/toolkit";
 
 const ClassType = (props: {
   changeFilter: (
     arg1: React.MouseEvent<HTMLDivElement>,
-    arg2: Function,
+    arg2: ActionCreatorWithPayload<string | number, "filter/changeFilterTypes">,
   ) => void;
 }) => {
   const addFilterType = (event: React.MouseEvent<HTMLDivElement>) => {

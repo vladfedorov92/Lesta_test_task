@@ -1,10 +1,14 @@
 import React from "react";
 import { changeFilterLevels } from "../slices/filterSlice";
+import { ActionCreatorWithPayload } from "@reduxjs/toolkit";
 
 const Level_16 = (props: {
   changeFilter: (
     arg1: React.MouseEvent<HTMLDivElement>,
-    arg2: Function,
+    arg2: ActionCreatorWithPayload<
+      string | number,
+      "filter/changeFilterLevels"
+    >,
   ) => void;
 }) => {
   const addFilterLevel = (event: React.MouseEvent<HTMLDivElement>) => {

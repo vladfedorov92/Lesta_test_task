@@ -31,7 +31,7 @@ const ShipList: React.FC = () => {
   return (
     <div className={"container"}>
       {vehicles.map((item: Vehicle, index: number) => (
-        <Ship key={index} index={index} ship={item} />
+        <Ship key={"ship" + index} index={index} ship={item} />
       ))}
     </div>
   );

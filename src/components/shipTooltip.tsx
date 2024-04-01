@@ -10,7 +10,7 @@ interface DescriptionProps {
   position: { x: number; y: number };
 }
 
-const Description: React.FC<DescriptionProps> = (props) => {
+const ShipTooltip: React.FC<DescriptionProps> = (props) => {
   return (
     <div
       className={"shipDescription"}
@@ -34,4 +34,4 @@ const Description: React.FC<DescriptionProps> = (props) => {
   );
 };
 
-export default Description;
+export default ShipTooltip;

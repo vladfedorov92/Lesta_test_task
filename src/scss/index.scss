@@ -15,15 +15,17 @@
 }
 
 header {
-  @include flex(column, wrap, center, center);
+  @include flex(column, wrap, space-between, center);
   background-color: $bgColor;
   border: $border;
   margin-bottom: 1vh;
-  padding-bottom: 1vh;
+  padding: 1vh 1vw 1vh 1vw;
+  min-height: 37vh;
+
 
   h1 {
     margin-top: 0;
-    padding: 0;
+    text-align: center;
     @include font(bold, 3);
     font-family: Impact, fantasy;
     @media screen and (max-width: 719px) {
@@ -32,6 +34,7 @@ header {
   }
 
   h3 {
+    padding-left: 1vw;
     @include font(normal, 1.5);
     font-family: Impact, fantasy;
     margin-bottom: 0;
@@ -42,12 +45,97 @@ header {
 
   button {
     @include font(light, 0.7);
-    font-family:
-      Andale Mono,
-      monospace;
+    font-family: Andale Mono,
+    monospace;
     @include button(cadetblue);
     @media screen and (max-width: 719px) {
       @include font(light, 0.35);
+    }
+  }
+
+  .filterTitleContainer {
+    border: $border;
+    background: $bgColor;
+    padding: 1vh 1vw 0 1vw;
+    @include font(light, 1);
+    font-family: Andale Mono,
+    monospace;
+    @media screen and (max-width: 950px) {
+      @include font(light, 0.5);
+    }
+    @media screen and (max-width: 600px) {
+      @include font(light, 0.1);
+    }
+
+    .filterTitle {
+      margin-bottom: 1vh;
+      text-align: center;
+    }
+
+    .filterContainer {
+      padding: 0;
+      margin: 0;
+
+      .filterButtonApply {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 23vh;
+        right: 5vw;
+        @include button(green);
+        margin-bottom: 1vh;
+        margin-right: 1vw;
+        width: 7vw;
+        padding: 3%;
+      }
+
+      .filterButtonReset {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 23vh;
+        right: 5vw;
+        @include button(red);
+        width: 7vw;
+        padding: 3%;
+      }
+
+      .filterColumn {
+        padding: 0;
+        @include grid(4, 5%);
+        margin-bottom: 0;
+
+        .filterBox {
+          @include flex(row, wrap, center, normal);
+          gap: 3%;
+          margin-bottom: 3%;
+
+          .filterOption {
+            font-size: $mainFontSize / 1.5;
+            width: 2vw;
+            height: 2vh;
+            white-space: nowrap;
+            @media screen and (max-width: 950px) {
+              font-size: $mainFontSize / 2;
+            }
+
+            .filterFlag {
+              width: 100%;
+            }
+          }
+
+          .filterOptionBox {
+            @include font(bold, 0.65);
+            font-family: Impact, fantasy;
+            text-align: center;
+            margin: 0;
+            border: 1px solid darken(whitesmoke, 40);
+            width: 1vw;
+            height: 2vh;
+            cursor: default;
+          }
+        }
+      }
     }
   }
 }
@@ -56,7 +144,7 @@ header {
   @include flex(row, wrap, center, center);
   overflow-y: auto;
   max-width: 100vw;
-  max-height: 77vh;
+  max-height: 62vh;
 
   .box {
     @include grid(4, 1%);
@@ -72,10 +160,13 @@ header {
         padding: 1vh 1vw 1vh 1vw;
 
         .vehicleTitle {
-          @include font(normal, 1.5);
+          @include font(normal, 1.3);
           font-family: Impact, fantasy;
-          @media screen and (max-width: 719px) {
+          @media screen and (max-width: 1100px) {
             @include font(normal, 0.75);
+          }
+          @media screen and (max-width: 800px) {
+            @include font(normal, 0.5);
           }
         }
       }
@@ -87,14 +178,14 @@ header {
 
     .shipDescription {
       @include flex(column, wrap, center, center);
+      position: absolute;
       border: $border;
-      position: fixed;
-      max-width: 25vw;
+      max-width: 30vw;
       max-height: 60vh;
+      transform: translate(2%, -50%);
       @include font(lighter, 0.8);
-      font-family:
-        Andale Mono,
-        monospace;
+      font-family: Andale Mono,
+      monospace;
       backdrop-filter: blur(24px);
       overflow: hidden;
       @media screen and (max-width: 719px) {
@@ -141,72 +232,6 @@ header {
 
 img {
   width: 70%;
-}
-
-.filterTitleContainer {
-  border: $border;
-  background: $bgColor;
-  padding: 1vh 1vw;
-  @include font(light, 1);
-  font-family:
-    Andale Mono,
-    monospace;
-  max-width: 45vw;
-  @media screen and (max-width: 950px) {
-    @include font(light, 0.5);
-  }
-  @media screen and (max-width: 600px) {
-    @include font(light, 0.1);
-  }
-
-  .filterTitle {
-    @include flex(row, wrap, space-between, center);
-    padding-left: 10%;
-    padding-right: 5%;
-  }
-
-  .filterContainer {
-    max-width: 65vw;
-    .filterButtonApply {
-      @include button(green);
-    }
-
-    .filterButtonReset {
-      @include button(red);
-    }
-
-    .filterColumn {
-      padding: 0;
-      @include grid(7, 1%);
-      margin-left: 0;
-
-      .filterBox {
-        @include flex(row, wrap, center, center);
-        gap: 5%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-
-        .filterOption {
-          font-size: $mainFontSize / 1.5;
-          width: 2vw;
-          height: 2vh;
-          white-space: nowrap;
-          @media screen and (max-width: 950px) {
-            font-size: $mainFontSize / 2;
-          }
-        }
-
-        .filterOptionBox {
-          @include flex(column, wrap, center, center);
-          margin: 0;
-          border: 1px solid darken(whitesmoke, 40);
-          width: 1vw;
-          height: 2vh;
-          cursor: default;
-        }
-      }
-    }
-  }
 }
 
 ::-webkit-scrollbar {
