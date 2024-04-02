@@ -289,7 +289,7 @@ header {
           width: 60%; }
           @media screen and (max-width: 1500px) {
             .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
-              width: 50%; } }
+              width: 40%; } }
           @media screen and (max-width: 800px) {
             .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
               display: none; } }
