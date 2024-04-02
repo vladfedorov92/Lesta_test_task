@@ -62,18 +62,6 @@ const Ship = (props: {
           <img src={props.ship.icons.medium} alt="" />
         </div>
       </div>
-      {/*{showDescription && (*/}
-      {/*  <ShipTooltip*/}
-      {/*    title={props.ship.title}*/}
-      {/*    description={props.ship.description}*/}
-      {/*    nationName={props.ship.nation.title}*/}
-      {/*    typeName={props.ship.type.title}*/}
-      {/*    level={props.ship.level}*/}
-      {/*    vehicleImage={props.ship.icons.medium}*/}
-      {/*    position={position}*/}
-      {/*  />*/}
-      {/*)}*/}
-
       {tooltipWrapper &&
         showDescription &&
         createPortal(

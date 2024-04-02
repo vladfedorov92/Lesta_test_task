@@ -5,7 +5,10 @@ import { changeFilterLevels } from "../slices/filterSlice";
 const Levels = (props: {
   changeFilter: (
     arg0: number,
-    arg1: ActionCreatorWithPayload<number | string, "filter/changeFilterLevels">,
+    arg1: ActionCreatorWithPayload<
+      number | string,
+      "filter/changeFilterLevels"
+    >,
   ) => void;
 }) => {
   const levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
@@ -14,9 +17,7 @@ const Levels = (props: {
   };
   return (
     <div className={"filterColumn"}>
-      <div className={"filterTitle"}>
-        Уровень
-        </div>
+      <div className={"filterTitle"}>Уровень</div>
       {levels.map((level: number) => {
         const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
           const target = event.target as HTMLElement;
@@ -27,11 +28,7 @@ const Levels = (props: {
         };
         return (
           <div className={"filterBox"} key={`filter_level_${level}`}>
-            <div
-              className={"filterOptionBox"}
-              onClick={onClick}
-              // title={level.toString()}
-            ></div>
+            <div className={"filterOptionBox"} onClick={onClick}></div>
             <div className={"filterOption"}>{level}</div>
           </div>
         );

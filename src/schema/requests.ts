@@ -1,5 +1,3 @@
-// import { GraphQLClient } from "graphql-request";
-
 import { GraphQLClient } from "graphql-request";
 
 const API_ENDPOINT = "https://vortex.korabli.su/api/graphql/glossary/";

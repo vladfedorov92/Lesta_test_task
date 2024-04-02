@@ -32,13 +32,14 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  column-gap: 10vw;
   background-color: rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(0, 0, 0, 0.3);
   margin-bottom: 1vh;
   padding: 1vh 1vw 1vh 1vw;
   min-height: 37vh; }
   header h1 {
-    margin-top: 0;
+    margin: 0;
     text-align: center;
     font-size: 3.3em;
     font-weight: bold;
@@ -55,7 +56,7 @@ header {
     font-weight: normal;
     color: aliceBlue;
     font-family: Impact, fantasy;
-    margin-bottom: 0; }
+    margin: 0; }
     @media screen and (max-width: 719px) {
       header h3 {
         font-size: 0.825em;
@@ -97,8 +98,7 @@ header {
         font-weight: light;
         color: aliceBlue; } }
     header .filterTitleContainer .filterTitle {
-      margin-bottom: 1vh;
-      text-align: center; }
+      margin-bottom: 1vh; }
     header .filterTitleContainer .filterContainer {
       padding: 0;
       margin: 0; }
@@ -147,7 +147,7 @@ header {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: start;
           align-items: normal;
           gap: 3%;
           margin-bottom: 3%; }
@@ -172,6 +172,10 @@ header {
             width: 1vw;
             height: 2vh;
             cursor: default; }
+            header .filterTitleContainer .filterContainer .filterColumn .filterBox .filterOptionBox:hover {
+              border-color: cadetblue;
+              transform: translateY(-3px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
 
 .container {
   display: flex;
@@ -230,6 +234,7 @@ header {
       align-items: center;
       position: absolute;
       border: 2px solid rgba(0, 0, 0, 0.3);
+      min-height: 60vh;
       max-width: 30vw;
       max-height: 60vh;
       transform: translate(2%, -50%);
@@ -237,7 +242,7 @@ header {
       font-weight: lighter;
       color: aliceBlue;
       font-family: Andale Mono, monospace;
-      backdrop-filter: blur(24px);
+      backdrop-filter: blur(18px);
       overflow: hidden; }
       @media screen and (max-width: 719px) {
         .container .box .shipDescription {
@@ -253,17 +258,25 @@ header {
         width: 90%;
         height: 90%;
         text-decoration: underline; }
+        @media screen and (max-width: 1400px) {
+          .container .box .shipDescription .shipDescriptionProps {
+            font-size: 0.8461538462em; } }
         @media screen and (max-width: 1100px) {
           .container .box .shipDescription .shipDescriptionProps {
             font-size: 0.55em; } }
         .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
-          width: 40%; }
+          width: 60%; }
       .container .box .shipDescription .shipDescriptionPropsTitle {
         font-size: 1.65em;
         font-weight: normal;
         color: aliceBlue;
         font-family: Impact, fantasy;
         text-decoration: underline; }
+        @media screen and (max-width: 1400px) {
+          .container .box .shipDescription .shipDescriptionPropsTitle {
+            font-size: 0.935em;
+            font-weight: normal;
+            color: aliceBlue; } }
         @media screen and (max-width: 1100px) {
           .container .box .shipDescription .shipDescriptionPropsTitle {
             font-size: 0.77em;
@@ -278,6 +291,9 @@ header {
         padding-right: 1vh;
         padding-left: 1vh;
         text-align: center; }
+        @media screen and (max-width: 1400px) {
+          .container .box .shipDescription .shipDescriptionPropsDescription {
+            font-size: 0.8461538462em; } }
         @media screen and (max-width: 1100px) {
           .container .box .shipDescription .shipDescriptionPropsDescription {
             font-size: 0.55em; } }

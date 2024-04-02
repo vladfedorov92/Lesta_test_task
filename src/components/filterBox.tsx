@@ -1,10 +1,4 @@
 import React from "react";
-import Level_16 from "./level_1-6";
-import Level811 from "./level_7-11";
-import Nation16 from "./nation_1-6";
-import Nation712 from "./nation_7-12";
-import Nation13 from "./nation_13";
-import ClassType from "./classType";
 import { useAppDispatch, useAppSelector } from "../hooks/hooks";
 import { addVehicles, filterVehicles } from "../slices/vehicleSlice";
 import { Vehicle } from "../constants/constants";
@@ -35,27 +29,13 @@ const FilterBox = (props: { resetFilter: () => void }) => {
     }
     props.resetFilter();
   };
-  const changeFilter = (
-    value: number | string,
-    action: ActionFunction,
-  ) => {
+  const changeFilter = (value: number | string, action: ActionFunction) => {
     dispatch(action(value));
   };
   return (
     <div className={"filterTitleContainer"}>
-      {/*<div className={"filterTitle"}>*/}
-      {/*  <h4>Уровень</h4>*/}
-      {/*  <h4>Нация</h4>*/}
-      {/*  <h4>Класс</h4>*/}
-      {/*</div>*/}
       <form onSubmit={submitFilter} onReset={resetFilter}>
         <div className={"filterContainer"}>
-          {/*<Level_16 changeFilter={changeFilter} />*/}
-          {/*<Level811 changeFilter={changeFilter} />*/}
-          {/*<Nation16 changeFilter={changeFilter} />*/}
-          {/*<Nation712 changeFilter={changeFilter} />*/}
-          {/*<Nation13 changeFilter={changeFilter} />*/}
-          {/*<ClassType changeFilter={changeFilter} />*/}
           <Levels changeFilter={changeFilter} />
           <Nations changeFilter={changeFilter} />
           <Types changeFilter={changeFilter} />

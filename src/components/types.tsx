@@ -39,9 +39,7 @@ const Types = (props: {
   };
   return (
     <div className={"filterColumn"}>
-      <div className={"filterTitle"}>
-        Класс
-      </div>
+      <div className={"filterTitle"}>Класс</div>
       {types.map((type: Type) => {
         const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
           const target = event.target as HTMLElement;

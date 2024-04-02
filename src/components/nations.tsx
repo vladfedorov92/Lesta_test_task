@@ -70,7 +70,7 @@ const Nations = (props: {
     },
     {
       title: "Италия",
-      name: "Italy",
+      name: "italy",
       src: italy,
     },
     {
@@ -104,9 +104,7 @@ const Nations = (props: {
   };
   return (
     <div className={"filterColumn"}>
-      <div className={"filterTitle"}>
-        Нация
-      </div>
+      <div className={"filterTitle"}>Нация</div>
       {nations.map((nation: Nation) => {
         const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
           const target = event.target as HTMLElement;
