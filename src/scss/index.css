@@ -255,8 +255,6 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        width: 90%;
-        height: 90%;
         text-decoration: underline; }
         @media screen and (max-width: 1400px) {
           .container .box .shipDescription .shipDescriptionProps {
@@ -265,16 +263,20 @@ header {
           .container .box .shipDescription .shipDescriptionProps {
             font-size: 0.55em; } }
         .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
-          width: 60%; }
+          margin: 0;
+          width: 80%; }
+          @media screen and (max-width: 1500px) {
+            .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
+              width: 50%; } }
       .container .box .shipDescription .shipDescriptionPropsTitle {
         font-size: 1.65em;
         font-weight: normal;
         color: aliceBlue;
         font-family: Impact, fantasy;
         text-decoration: underline; }
-        @media screen and (max-width: 1400px) {
+        @media screen and (max-width: 1500px) {
           .container .box .shipDescription .shipDescriptionPropsTitle {
-            font-size: 0.935em;
+            font-size: 1.32em;
             font-weight: normal;
             color: aliceBlue; } }
         @media screen and (max-width: 1100px) {
