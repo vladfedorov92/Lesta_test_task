@@ -286,7 +286,7 @@ header {
             font-size: 0.3666666667em; } }
         .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
           margin: 0;
-          width: 80%; }
+          width: 60%; }
           @media screen and (max-width: 1500px) {
             .container .box .shipDescription .shipDescriptionProps .vehicleImageInDescription {
               width: 50%; } }
