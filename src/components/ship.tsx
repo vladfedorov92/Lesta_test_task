@@ -30,15 +30,16 @@ const Ship = (props: {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     const changePositionX = screenWidth * 0.31;
+    const changePositionY = screenHeight * 0.25;
 
     if (x < screenWidth / 2 && y < screenHeight / 2) {
       setPosition({ x: e.clientX + 10, y: e.clientY + 10 });
     } else if (x < screenWidth / 2 && y > screenHeight / 2) {
-      setPosition({ x: e.clientX + 10, y: e.clientY - 180 });
+      setPosition({ x: e.clientX + 10, y: e.clientY - changePositionY });
     } else if (x > screenWidth / 2 && y < screenHeight / 2) {
       setPosition({ x: e.clientX - changePositionX, y: e.clientY + 10 });
     } else {
-      setPosition({ x: e.clientX - changePositionX, y: e.clientY - 180 });
+      setPosition({ x: e.clientX - changePositionX, y: e.clientY - changePositionY });
     }
   };
   return (

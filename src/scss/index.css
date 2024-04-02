@@ -244,8 +244,15 @@ header {
       font-family: Andale Mono, monospace;
       backdrop-filter: blur(18px);
       overflow: hidden; }
+      @media screen and (max-width: 1400px) {
+        .container .box .shipDescription {
+          min-height: 40vh;
+          font-size: 1.1em;
+          font-weight: lighter;
+          color: aliceBlue; } }
       @media screen and (max-width: 719px) {
         .container .box .shipDescription {
+          min-height: 40vh;
           font-size: 0.44em;
           font-weight: lighter;
           color: aliceBlue; } }

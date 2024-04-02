@@ -196,7 +196,12 @@ header {
       monospace;
       backdrop-filter: blur(18px);
       overflow: hidden;
+      @media screen and (max-width: 1400px) {
+        min-height: 40vh;
+        @include font(lighter, 1);
+      }
       @media screen and (max-width: 719px) {
+        min-height: 40vh;
         @include font(lighter, 0.4);
       }
 
