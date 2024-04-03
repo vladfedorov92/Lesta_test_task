@@ -13,6 +13,7 @@
     "@types/react": "^18.2.63",
     "@types/react-dom": "^18.2.20",
     "@types/react-redux": "^7.1.33",
+    "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
