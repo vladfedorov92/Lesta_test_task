@@ -191,29 +191,22 @@ header {
       max-width: 30vw;
       max-height: 60vh;
       transform: translate(2%, -50%);
-      @include font(lighter, 1);
+      @include font(lighter, 0.8);
       font-family: Andale Mono,
       monospace;
       backdrop-filter: blur(18px);
       overflow: hidden;
-      @media screen and (max-width: 1800px) {
-        min-height: 40vh;
-        @include font(lighter, 0.8);
-      }
       @media screen and (max-width: 1400px) {
         min-height: 40vh;
         @include font(lighter, 0.6);
       }
       @media screen and (max-width: 1000px) {
-        min-height: 40vh;
         @include font(lighter, 0.4);
       }
       @media screen and (max-width: 800px) {
-        min-height: 40vh;
         @include font(lighter, 0.2);
       }
       @media screen and (max-width: 400px) {
-        min-height: 40vh;
         @include font(lighter, 0.2);
       }
 

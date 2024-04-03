@@ -238,18 +238,12 @@ header {
       max-width: 30vw;
       max-height: 60vh;
       transform: translate(2%, -50%);
-      font-size: 1.1em;
+      font-size: 0.88em;
       font-weight: lighter;
       color: aliceBlue;
       font-family: Andale Mono, monospace;
       backdrop-filter: blur(18px);
       overflow: hidden; }
-      @media screen and (max-width: 1800px) {
-        .container .box .shipDescription {
-          min-height: 40vh;
-          font-size: 0.88em;
-          font-weight: lighter;
-          color: aliceBlue; } }
       @media screen and (max-width: 1400px) {
         .container .box .shipDescription {
           min-height: 40vh;
@@ -258,19 +252,16 @@ header {
           color: aliceBlue; } }
       @media screen and (max-width: 1000px) {
         .container .box .shipDescription {
-          min-height: 40vh;
           font-size: 0.44em;
           font-weight: lighter;
           color: aliceBlue; } }
       @media screen and (max-width: 800px) {
         .container .box .shipDescription {
-          min-height: 40vh;
           font-size: 0.22em;
           font-weight: lighter;
           color: aliceBlue; } }
       @media screen and (max-width: 400px) {
         .container .box .shipDescription {
-          min-height: 40vh;
           font-size: 0.22em;
           font-weight: lighter;
           color: aliceBlue; } }
